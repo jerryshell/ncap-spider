@@ -1,5 +1,21 @@
 # 文本情感分类-新闻采集
 
+## Docker
+
+```bash
+mkdir -p /docker-data/tf/notebooks
+```
+
+```bash
+docker run -d \
+  --rm \
+  --name tf \
+  -p 8888:8888 \
+  -p 8000:8000 \
+  -v /docker-data/tf/notebooks:/tf/notebooks \
+  tensorflow/tensorflow:latest-py3-jupyter
+```
+
 ## 依赖
 
 ```bash
