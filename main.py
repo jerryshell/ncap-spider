@@ -30,6 +30,13 @@ def main(form: CreateTaskForm):
     }
 
 
+@app.get('/info')
+def info():
+    return {
+        'ok': True
+    }
+
+
 def run_task(news_id, news_url, notify_url):
     comment_list = []
     try:
