@@ -21,3 +21,11 @@ docker run -d \
 ```bash
 pip3 install --upgrade requests bs4 fastapi uvicorn
 ```
+
+## 报错解决：__NSPlaceholderDate initialize
+
+https://stackoverflow.com/questions/50168647/multiprocessing-causes-python-to-crash-and-gives-an-error-may-have-been-in-progr
+
+```bash
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+```

@@ -31,7 +31,6 @@ def main(form: CreateTaskForm):
 
 
 def run_task(news_id, news_url, notify_url):
-    title = ''
     comment_list = []
     try:
         title = get_title_by_url(news_url)
