@@ -15,4 +15,8 @@ def loadavg():
 
 if __name__ == '__main__':
     loadavg = loadavg()
+    print('---')
     print(loadavg)
+    print('---')
+    for k, v in loadavg:
+        print(k, v)

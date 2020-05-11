@@ -13,6 +13,13 @@ def meminfo():
 
 if __name__ == '__main__':
     meminfo = meminfo()
+    print('---')
     print(meminfo)
-    print('Total memory: {0}'.format(meminfo['MemTotal']))
-    print('Free memory: {0}'.format(meminfo['MemFree']))
+    print('---')
+    for k, v in meminfo:
+        print(k, v)
+    print('---')
+    print('MemTotal: {0}'.format(meminfo['MemTotal']))
+    print('MemFree: {0}'.format(meminfo['MemFree']))
+    print('SwapTotal: {0}'.format(meminfo['SwapTotal']))
+    print('SwapFree: {0}'.format(meminfo['SwapFree']))
