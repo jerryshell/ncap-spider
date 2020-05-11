@@ -8,6 +8,8 @@ from pydantic import BaseModel
 
 from comment_list import get_comment_list_by_news_id
 from news_title import get_title_by_url
+from sysinfo.loadavg import loadavg
+from sysinfo.meminfo import meminfo
 
 # 实例化 FastAPI
 app = FastAPI()
@@ -33,7 +35,9 @@ def main(form: CreateTaskForm):
 @app.get('/info')
 def info():
     return {
-        'ok': True
+        'ok': True,
+        'loadavg': loadavg(),
+        'meminfo': meminfo(),
     }
 
 
