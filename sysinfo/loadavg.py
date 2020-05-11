@@ -18,5 +18,5 @@ if __name__ == '__main__':
     print('---')
     print(loadavg)
     print('---')
-    for k, v in loadavg:
+    for k, v in loadavg.items():
         print(k, v)

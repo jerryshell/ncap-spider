@@ -16,7 +16,7 @@ if __name__ == '__main__':
     print('---')
     print(meminfo)
     print('---')
-    for k, v in meminfo:
+    for k, v in meminfo.items():
         print(k, v)
     print('---')
     print('MemTotal: {0}'.format(meminfo['MemTotal']))
