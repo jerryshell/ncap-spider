@@ -15,14 +15,14 @@ from sysinfo.meminfo import meminfo
 app = FastAPI()
 
 
-class CommonSpiderTaskCreateForm(BaseModel):
+class CommentSpiderTaskCreateForm(BaseModel):
     news_id: str
     news_url: str
     notify_url: str
 
 
-@app.post('/create/commonSpiderTask')
-def create_common_spider_task(form: CommonSpiderTaskCreateForm):
+@app.post('/create/commentSpiderTask')
+def create_comment_spider_task(form: CommentSpiderTaskCreateForm):
     print(form)
     # 新进程
     p = Process(target=run_task, args=(form.news_id, form.news_url, form.notify_url))
