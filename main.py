@@ -8,6 +8,7 @@ from pydantic import BaseModel
 
 from comment_list import get_comment_list_by_news_id
 from news_title import get_title_by_url
+from rank_news import get_rank_news
 from sysinfo.loadavg import loadavg
 from sysinfo.meminfo import meminfo
 
@@ -21,6 +22,20 @@ class CommentSpiderTaskCreateForm(BaseModel):
     notify_url: str
 
 
+@app.get('/info')
+def info():
+    return {
+        'ok': True,
+        'loadavg': loadavg(),
+        'meminfo': meminfo(),
+    }
+
+
+@app.get('/rankNews')
+def rank():
+    return get_rank_news()
+
+
 @app.post('/create/commentSpiderTask')
 def create_comment_spider_task(form: CommentSpiderTaskCreateForm):
     print(form)
@@ -29,15 +44,6 @@ def create_comment_spider_task(form: CommentSpiderTaskCreateForm):
     p.start()
     return {
         'ok': True
-    }
-
-
-@app.get('/info')
-def info():
-    return {
-        'ok': True,
-        'loadavg': loadavg(),
-        'meminfo': meminfo(),
     }
 
 
