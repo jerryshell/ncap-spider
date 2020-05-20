@@ -14,7 +14,7 @@ headers = {
 
 def get_rank_news():
     response = requests.get(
-        'http://news.163.com/special/0001386F/rank_whole.html',
+        'https://news.163.com/special/0001386F/rank_whole.html',
         headers=headers,
         verify=False
     )

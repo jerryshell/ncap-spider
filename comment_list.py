@@ -12,7 +12,7 @@ headers = {
     'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
 }
 
-url_template = 'http://comment.api.163.com/api/v1/products/a2869674571f77b5a0867c3d71db5856/threads/{}/comments/newList'
+url_template = 'https://comment.api.163.com/api/v1/products/a2869674571f77b5a0867c3d71db5856/threads/{}/comments/newList'
 
 
 def get_comment_list_by_news_id_limit_and_offset(news_id, limit, offset):
