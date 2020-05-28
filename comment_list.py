@@ -31,13 +31,13 @@ def get_comment_list_by_news_id_limit_and_offset(news_id, limit, offset):
         verify=False
     )
 
-    jsonResponse = json.loads(response.text)
-    print(jsonResponse)
-    message = jsonResponse.get('message', 'NO_ERROR')
+    json_response = json.loads(response.text)
+    print(json_response)
+    message = json_response.get('message', 'NO_ERROR')
     if message == '非法的分页参数':
         return []
 
-    comment_list = jsonResponse['comments']
+    comment_list = json_response['comments']
 
     result = []
     for comment_id in comment_list:
