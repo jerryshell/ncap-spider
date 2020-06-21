@@ -1,20 +1,12 @@
-# 文本情感分类-新闻采集
+# 新闻评论分析平台数据采集模块
 
-## Docker
+## 相关项目
 
-```bash
-mkdir -p /docker-data/tf/notebooks
-```
-
-```bash
-docker run -d \
-  --rm \
-  --name tf \
-  -p 8888:8888 \
-  -p 8000:8000 \
-  -v /docker-data/tf/notebooks:/tf/notebooks \
-  tensorflow/tensorflow:latest-py3-jupyter
-```
+* [新闻评论分析平台 Web 端](https://github.com/jerryshell/ncap-admin)
+* [新闻评论分析平台数据大屏](https://github.com/jerryshell/ncap-datav)
+* [新闻评论分析平台服务端](https://github.com/jerryshell/ncap-server)
+* [新闻评论分析平台情感分析模块](https://github.com/jerryshell/ncap-model)
+* 新闻评论分析平台数据采集模块（当前项目）
 
 ## 依赖
 
@@ -22,7 +14,7 @@ docker run -d \
 pip3 install --upgrade requests bs4 fastapi uvicorn
 ```
 
-## 报错解决：__NSPlaceholderDate initialize
+## macOS __NSPlaceholderDate initialize 报错解决
 
 https://stackoverflow.com/questions/50168647/multiprocessing-causes-python-to-crash-and-gives-an-error-may-have-been-in-progr
 
